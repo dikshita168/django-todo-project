@@ -1,0 +1,380 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #2c3e50;
+  padding: 15px 30px;
+}
+
+nav .logo h2 {
+  color: white;
+  font-size: 35px;
+  letter-spacing: 2px;
+}
+
+nav .links {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin-left: auto;
+}
+
+nav .links a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+nav .links a:hover {
+  /* background-color:#ffffff; */
+  color: #f2eb18;
+  /* border-radius: 5px; */
+}
+
+.search-bar {
+  margin-right: 20px;
+  background-color: transparent;
+  padding: 0;
+  border: none;
+  display: flex;
+  align-items: center;
+}
+
+/* FORM */
+.search-form {
+  background-color: transparent !important;
+  box-shadow: none !important;
+  border: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+/* INPUT FIELD */
+.input-search {
+  padding: 4px 8px;
+  font-size: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: white;
+  color: rgb(23, 23, 23);
+}
+
+/* BUTTON */
+.sr-search {
+  width: 70px;
+  height: 38px;
+  padding: 4px 8px;
+  font-size: 16px;
+  border: 1px solid #539feb;
+  border-radius: 4px;
+  background-color: #539feb;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+/* HOVER EFFECTS */
+.input-search::placeholder {
+  color: #090808;
+}
+
+.sr-search:hover {
+  background-color: rgb(30, 89, 128);
+  color: #fbfbfb;
+  border: black;
+}
+
+/* add task */
+
+.add_container {
+  width: 500px;
+  margin: 0px auto;
+  padding: 30px;
+  border-radius: 10px;
+  /* background-color: #ffffff; */
+  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #2c3e50;
+}
+
+label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: bold;
+  color: #333;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+input[type="submit"] {
+  width: 50%;
+  margin: 2px auto;
+  padding: 10px;
+  background-color: #2980b9;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+input[type="submit"]:hover {
+  background-color: #2980b9;
+}
+
+
+/* home-page  */
+.home {
+  width: 90%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding-top: 30px;
+}
+
+.heading {
+  text-align: center;
+  font-size: 28px;
+  color: #2c3e50;
+  margin-bottom: 25px;
+}
+
+.task {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f0eeee;
+  padding: 15px 30px;
+  border-radius: 12px;
+  border: 1px solid rgb(183, 179, 179);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin: 20px auto;
+  flex-wrap: wrap;
+}
+
+.left-side {
+  flex: 1;
+  margin-right: 20px;
+}
+
+.left-side h2 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #3c3a3a;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.left-side p {
+  font-size: 18px;
+  color: #4e4d4d;
+}
+
+.btn {
+  display: flex;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.btn a {
+  padding: 8px 20px;
+  text-decoration: none;
+  background-color: #007bff;
+  color: white;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 500;
+  transition: background-color 0.3s;
+}
+
+.btn a:hover {
+  background-color: #dc3545;
+}
+
+/* history recover btn  */
+
+.recover {
+  display: flex;
+  justify-content: flex-end;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.recover a {
+  padding: 8px 14px;
+  background-color: #db5534;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 500;
+  transition: background-color 0.3s;
+}
+
+.recover a:hover {
+  background-color: #a52f22;
+}
+
+.recover .restore {
+  padding: 8px 14px;
+  background-color: #22a324;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 500;
+  transition: background-color 0.3s;
+}
+.recover .restore:hover {
+  background-color: #48762b;
+}
+
+/* details-template  */
+.task-detail {
+  max-width: 500px;
+  margin: 50px auto;
+  padding: 30px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  border: 1px solid rgb(200, 197, 197);
+}
+
+.task-detail h2 {
+  font-size: 28px;
+  margin-bottom: 15px;
+  color: #2c3e50;
+  text-align: left;
+}
+
+.task-detail p {
+  font-size: 18px;
+  color: #555;
+}
+
+.back-btn {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 10px 16px;
+  background-color: #3498db;
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.back-btn:hover {
+  background-color: #2980b9;
+  transform: translateY(-2px);
+}
+
+/* delete template  */
+.del-confirmation {
+  margin-top: 100px;
+  padding: 30px;
+  background-color: #fff0f0;
+  border: 1px solid #ffcccc;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(255, 0, 0, 0.1);
+}
+
+/* Paragraph Text */
+.del-confirmation p {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Task Title Highlight */
+.del-confirmation strong {
+  color: #d60000;
+}
+
+/* Buttons */
+.btn {
+  display: flex;
+  gap: 10px;
+}
+
+.btn a{
+  display: inline-block;
+  padding: 9px 20px;
+  margin-right: 10px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: bold;
+  /* transition: all 0.2s ease-in-out; */
+  background-color: #007bff;
+  color: white;
+}
+
+.btn a:last-child {
+  margin-right: 0; 
+}
+
+
+/* Delete Button */
+.delete-btn {
+  background-color: #d60000;
+  color: white;
+  border: none;
+  margin-right: 15px;
+  font-size: 18px;
+  padding: 8px 10px;
+  border-radius: 12px;
+}
+
+.delete-btn:hover {
+  background-color: #a80000;
+}
+
+/* Cancel Button */
+.cancel-btn {
+  background-color: #ccc;
+  color: black;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 12px;
+}
+
+.cancel-btn:hover {
+  background-color: #999;
+}
+
+/* active-link  */
+a {
+  text-decoration: none;
+  padding: 5px 10px;
+  color: #333;
+}
+
+a.active {
+  font-weight: bold;
+  color: #ffffff;
+  background-color: #3498db;
+  border-radius: 5px;
+
+}
+
+/* completed buttons  */

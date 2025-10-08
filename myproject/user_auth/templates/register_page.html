@@ -1,0 +1,35 @@
+{% extends 'main.html' %}
+
+{% block content %}
+
+    <center>
+        <h2>Register Page</h2>
+
+        {% if username_existed %} 
+        <h2 style="color: red;">Username already exist!!</h2>
+        {% endif %}
+
+        <form action="" method="POST">
+            {% csrf_token %}
+
+            <label for="">Firstname</label>
+            <input type="text" name="firstname"> <br>
+
+            <label for="">Lastname</label>
+            <input type="text" name="lastname"> <br>
+
+            <label for="">Email</label>
+            <input type="email" name="email"> <br>
+
+            <label for="">Username</label>
+            <input type="text" name="username"> <br>
+
+            <label for="">Password</label>
+            <input type="text" name="password" required> <br>
+
+            <input type="submit" value="Register" >
+        </form>
+
+    </center>
+    
+{% endblock content %}

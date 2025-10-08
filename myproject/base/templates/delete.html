@@ -1,0 +1,18 @@
+{% extends 'main.html' %}
+
+{% block content %}
+
+  <center>
+    <div class="del-confirmation">
+        <p>
+            Are you sure you want to delete record? <br>
+            <h2> <strong>{{ task.title }}</strong>  task </h2>
+        </p>
+
+        <a href="{% url 'confirm_del' task.id %}" class="delete-btn">Confirm</a>
+        <a href="{% url 'home' %}" class="cancel-btn">Cancel</a>
+    </div>
+</center>
+
+
+{% endblock content %}

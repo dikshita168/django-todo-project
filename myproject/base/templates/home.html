@@ -1,0 +1,26 @@
+{% extends 'main.html' %}
+
+{% block content %}
+    <div class="home">
+        <h2 class="heading">List of Task</h2>
+
+
+        {% for i in data %}
+        <div class="task">
+            <div class="left-side">
+                <h2>{{i.title}}</h2>
+                <!-- <p>{{i.desc}}</p> -->
+            </div>
+
+            <div class="btn">
+                <a href="{% url 'details' i.id %}">Details</a>
+                <a href="{% url 'update' i.id %}">update</a>
+                <a href="{% url 'mark_as_completed' i.id %}">Completed</a>
+                <a href="{% url 'delete_task' i.id %}">Delete</a>
+            </div>
+        </div>
+
+        {% endfor %}
+        
+    </div>
+{% endblock content %}

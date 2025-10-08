@@ -1,0 +1,35 @@
+{% extends 'main.html' %}
+
+    {% block content %}
+        <div class="home">
+            <h1 class="heading">Completed Task</h1>
+            <div class="recover">
+                
+                
+                <a href="{% url 'remove_all_completed' %}" >Remove All</a>
+            </div>
+
+            {% for i in tasks %}
+
+                <div class="task">
+
+                    <div class="left-side">
+                        <h2>{{i.title}}</h2>
+                        <p>{{i.desc}}</p>
+                    </div>
+
+                    <div class="btn">
+                            <a href="{% url 'restore_complete' i.id %}">Restore </a>
+                            <a href="{% url 'remove_complete' i.id  %}">Remove </a>
+                    </div>
+                    
+                </div>
+
+            {% empty %}
+                <p>No completed tasks yet.</p>  
+            {% endfor %}
+
+        </div>
+
+
+    {% endblock content %}

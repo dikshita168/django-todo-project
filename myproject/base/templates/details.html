@@ -1,0 +1,9 @@
+{% extends 'main.html' %}
+{% block content %}
+<div class="task-detail">
+    <h2>{{ task.title }}</h2>
+    <p>{{ task.desc }}</p>
+
+    <a href="{% url 'home' %}" class="back-btn">← Back to Tasks</a>
+</div>
+{% endblock %}

@@ -1,0 +1,37 @@
+{% extends 'main.html' %}
+
+    {% block content %}
+         <div class="home">
+
+            <h1 class="heading">List of Deleted Task</h1>
+
+            <div class="recover">
+                <a href="{% url 'restore_all' %}" class="restore">Restore All</a>
+                <a href="{% url 'delete_all' %}">Delete All</a>
+            </div>
+
+            {% if task  %}
+
+                {% for i in task %}
+                    <div class="task">
+            
+                        <div class="left-side">
+                            <h2>{{i.title}}</h2>
+                            <p>{{i.desc}}</p>
+                        </div>
+
+                        <div class="btn">
+                            <a href="{% url 'restore_task' i.id %}">Restore Task</a>
+                            <a href="{% url 'permenant_delete' i.id  %}">Remove Task</a>
+                        </div>
+                    </div>
+
+                {% endfor %}
+
+            {% else %}
+                 <p>No deleted tasks yet.</p>
+            {% endif %}
+
+        </div>
+
+    {% endblock content %}

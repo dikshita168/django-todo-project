@@ -1,0 +1,35 @@
+
+<nav>
+    <div class="logo">
+        <h2>TO-DO</h2>
+    </div>
+
+    <div class="links">
+
+        {% if request.user.is_authenticated %}
+            
+            <div class="search-bar">
+                <form action="" class="search-form">
+                    <input type="text" name="q" placeholder="Search task" class="input-search" >
+                    <button type="submit" value="search" class="sr-search">Search</button>
+                </form>
+                
+            </div>
+
+            <a href="{% url 'home' %}" class="{% if request.resolver_match.url_name == 'home' %}active{% endif %}">Home</a>
+            <a href="{% url 'add' %}" class="{% if request.resolver_match.url_name == 'add' %}active{% endif %}">Add</a>
+            <a href="{% url 'completed' %}" class="{% if request.resolver_match.url_name == 'completed' %}active{% endif %}">Completed</a>
+            <a href="{% url 'history' %}" class="{% if request.resolver_match.url_name == 'history' %}active{% endif %}">History</a>
+            <a href="{% url 'profile' %}" class="{% if request.resolver_match.url_name == 'profile' %}active{% endif %}">Profile({{user}})</a>
+            <a href="{% url 'logout_page' %}">Logout</a>
+            <a href="{% url 'about' %}" class="{% if request.resolver_match.url_name == 'about' %}active{% endif %}">About</a>
+
+        {% else %}
+
+            <a href="{% url 'login_page' %}" class="{% if request.resolver_match.url_name == 'login_page' %}active{% endif %}">Login</a>
+            <a href="{% url 'register_page' %}" class="{% if request.resolver_match.url_name == 'register_page' %}active{% endif %}">Register</a>
+            
+        
+        {% endif %}
+    </div>
+</nav>
